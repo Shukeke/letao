@@ -80,5 +80,5 @@ $(function(){
         /*6.重置验证*/
         $('#login').data('bootstrapValidator').resetForm();
     });
-
+    $form.data('bootstrapValidator').resetForm();
 });
