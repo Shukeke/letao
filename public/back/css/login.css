@@ -1,0 +1,45 @@
+html,body{
+  height: 100%;
+}
+.bg_login{
+  background-color:#222d32;
+}
+.panel-heading h3{
+  text-align: center;
+}
+.container{
+  margin-top: 150px;
+}
+.denglu{
+  margin-right: 50px;
+}
+.aside{
+  width: 180px;
+  height: 100%;
+  /*background: #222d32;*/
+  position: absolute;
+  left: 0;
+}
+.first{
+  height: 50px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  display: block;
+  background-color:pink;
+}
+.user img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 30px auto 0;
+  display: block;
+}
+.user p{
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+}
