@@ -1,45 +1,139 @@
-html,body{
-  height: 100%;
+html,
+body {
+    height: 100%;
 }
-.bg_login{
-  background-color:#222d32;
+
+.bg_login {
+    background-color: #222d32;
 }
-.panel-heading h3{
-  text-align: center;
+
+.panel-heading h3 {
+    text-align: center;
 }
-.container{
-  margin-top: 150px;
+
+.container {
+    margin-top: 150px;
 }
-.denglu{
-  margin-right: 50px;
+
+.denglu {
+    margin-right: 50px;
 }
-.aside{
-  width: 180px;
-  height: 100%;
-  /*background: #222d32;*/
-  position: absolute;
-  left: 0;
+
+.aside {
+    width: 180px;
+    height: 100%;
+    background: #3686a8;
+    position: absolute;
+    left: 0;
 }
-.first{
-  height: 50px;
-  line-height: 50px;
-  color: #fff;
-  text-align: center;
-  font-size: 24px;
-  display: block;
-  background-color:pink;
+
+.now {
+    left: -180px;
+    transition: all 0.5s;
 }
-.user img{
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin: 30px auto 0;
-  display: block;
+
+.title a {
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    display: block;
+    background-color: pink;
 }
-.user p{
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-  line-height: 40px;
-  height: 40px;
+
+.user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 30px auto 0;
+    display: block;
+}
+
+.user p {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:hover,
+a:active,
+a:focus {
+    text-decoration: none;
+}
+
+.lis>ul>li>a {
+    color: #fff;
+    padding-left: 50px;
+    height: 40px;
+    line-height: 40px;
+    border: 3px solid transparent;
+}
+
+.cate a {
+    color: #fff;
+    display: block;
+    padding-left: 70px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.cate {
+    display: none;
+}
+
+.main {
+    padding-left: 180px;
+    /* position: relative */
+}
+
+.mainshow {
+    padding-left: 0px;
+    transition: all 0.5s;
+}
+
+.main .head {
+    height: 50px;
+    /* line-height: 50px; */
+    background-color: #3686a8;
+    margin-bottom: 30px;
+}
+
+.main a {
+    color: snow;
+    font-size: 24px;
+    padding-top: 12px;
+}
+
+.nav ol {
+    margin: 0 10px;
+    height: 30px;
+    background-color: #d3cdeb;
+    margin-bottom: 60px;
+}
+
+.nav ol a {
+    color: wheat;
+    font-size: 16px;
+}
+
+#myBox1 {
+    width: 45%;
+    height: 400px;
+    /* background-color: pink; */
+}
+
+#myBox2 {
+    width: 45%;
+    height: 400px;
+    /* background-color: pink; */
 }
