@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,
 body {
     height: 100%;
@@ -136,4 +137,17 @@ a:focus {
     width: 45%;
     height: 400px;
     /* background-color: pink; */
+=======
+.bg_login{
+  background-color:#222d32;
+}
+.panel-heading h3{
+  text-align: center;
+}
+.container{
+  margin-top: 150px;
+}
+.denglu{
+  margin-right: 50px;
+>>>>>>> 3819f4e110fb35eadd93e45cb63a278fed1e340a
 }
