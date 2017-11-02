@@ -38,7 +38,7 @@ $(function() {
         $("#banModal").modal("show");
         var id = $(this).parent().data("id");
         var isDelete = $(this).parent().data("isDelete");
-        $(".btn_confirm").on("click", function() {
+        $(".btn_confirm").off().on("click", function() {
             $.ajax({
                 type: "POST",
                 url: "/user/updateUser",
@@ -47,6 +47,8 @@ $(function() {
                     isDelete: isDelete,
                 },
                 success: function(data) {
+                    console.log(data);
+
                     if (data.success) {
                         $("#banModal").modal("hide");
                         render();
@@ -54,7 +56,5 @@ $(function() {
                 }
             })
         })
-    });
-
-
+    })
 })

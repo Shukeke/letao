@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>乐淘后台管理页面</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content col-md-6 col-md-offset-4">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">温馨提示</h4>
+                </div>
+                <div class="modal-body">
+                    <p>你确定要退出后台管理系统吗?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary btns">确定</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <div class="modal fade" tabindex="-1" id="goodsModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">添加二级分类</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="form">
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <span class="dropdown-text">请选择一级分类</span>
+                                    <!--这个可以用来传输数据，并且不会显示出来。-->
+                                    <input type="hidden" name="categoryId" id="categoryId">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="options dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <!--挖个坑-->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="brandName" name="brandName" placeholder="请输入二级分类名称">
+                        </div>
+
+                        <div class="form-group ">
+                            <div class="fileupload_box">
+                                <button class="btn btn-default">上传图片</button>
+                                <input id="fileupload" type="file" name="pic1" class="btn btn-default" data-url="/category/addSecondCategoryPic"> </div>
+
+                        </div>
+
+                        <div class="form-group img_box">
+                            <img src="img/none.png" width="100" height="100" alt="">
+                            <input type="hidden" name="brandLogo" id="brandLogo">
+                            <input type="hidden" name="hot" id="hot" value="1">
+
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" form="form" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" form="form" class="btn_confirm btn btn-primary">确定</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="aside">
+        <div class="title">
+            <a href="index.html"><span>前端14期</span></a>
+        </div>
+        <div class="user">
+            <img src="img/default.jpg" alt="">
+            <p>超级管理员</p>
+        </div>
+        <div class="lis">
+            <ul>
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-list"></span>分类管理</a>
+                    <div class="cate">
+                        <a href="#">一级分类</a>
+                        <a href="#">二级分类</a>
+                    </div>
+
+
+                </li>
+                <li><a href="#"><span class="glyphicon glyphicon-tags"></span>商品管理</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="head">
+            <div class="container-fluid">
+                <a href="#" class="pull-left onleft"> <span class="glyphicon glyphicon-align-justify"></span></a>
+                <a href="#" class="pull-right head_right"> <span class="glyphicon glyphicon-log-out"></span></a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="nav">
+                <ol class="breadcrumb ">
+                    <li><a href="#">管理系统</a></li>
+                    <li><a href="#">商品管理</a></li>
+                </ol>
+            </div>
+            <div class="content">
+
+                <button type="button" class="btn btn-default btnadd" style="margin-bottom:20px">添加商品</button>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td width="10%">序号</td>
+                            <td width="20%">商品名称</td>
+                            <td width="30%">商品描述</td>
+                            <td width="10%">商品库存</td>
+                            <td width="10%">商品尺寸</td>
+                            <td width="10%">商品状态</td>
+                            <td width="10%">操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <nav aria-label="Page navigation">
+                <ul id="paginator">
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="lib/bootstrap-validator/js/bootstrapValidator.js"></script>
+    <script src="lib/bootstrap-paginator/bootstrap-paginator.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/nprogress/nprogress.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>

@@ -70,13 +70,14 @@ $(function() {
             data: $form.serialize(),
             dataType: 'json',
             success: function(data) {
+                console.log(data);
                 if (data.success) {
                     location.href = 'index.html';
                 } else {
                     if (data.error == 1000) {
                         $form.data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback');
                     } else if (data.error == 1001) {
-                        $form.data('bootstrapValidator').updateStatus('username', 'INVALID', 'callback');
+                        $form.data('bootstrapValidator').updateStatus('password', 'INVALID', 'callback');
                     }
                 }
 

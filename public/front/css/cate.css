@@ -1,0 +1,48 @@
+.content_left {
+    width: 90px;
+    height: 100%;
+    /* border: 1px solid #000000; */
+    float: left;
+    position: relative;
+}
+
+.content_left li {
+    height: 50px;
+    line-height: 50px;
+    /* border-right: 1px solid red; */
+    border-bottom: 1px solid red;
+    text-align: center;
+    background-color: pink;
+}
+
+.content_left li.now {
+    background-color: #fff;
+    border-right: none;
+}
+
+.content_left a {
+    color: #666;
+}
+
+.content_right {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content_right li {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+}
+
+.content_right img {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+}
+
+.content_right .info {
+    margin-top: 10px;
+    margin-left: 10px;
+}

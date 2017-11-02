@@ -1,6 +1,17 @@
 var log = console.log.bind(console);
 
-
+if (location.href.indexOf("login.html") < 0) {
+    $.ajax({
+        type: "get",
+        url: " /employee/checkRootLogin",
+        success: function(data) {
+            if (data.error === 400) {
+                //说明用户没有登录，跳转到登录页面
+                location.href = "login.html";
+            }
+        }
+    });
+}
 $(function() {
     $(".cate").prev().on("click", function() {
 

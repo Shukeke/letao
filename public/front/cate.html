@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="" href="favicon.ico">
+    <link rel="stylesheet" type="" href="lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" type="" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" type="" href="css/common.css">
+    <link rel="stylesheet" type="" href="css/cate.css">
+</head>
+
+<body>
+    <div class="lt_container">
+        <div class="lt_header">
+            <a href="#"><span class="fa fa-home icon_left"></span></a>
+            <h4>乐淘商城</h4>
+            <a href="#"><span class="fa fa-search icon_right"></span></a>
+        </div>
+
+        <div class="lt_content">
+            <div class="content_left">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <ul>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content_right">
+                <div class="mui-scroll-wrapper">
+                    <ul class="mui-scroll">
+                        <li>
+                            <a href="#">
+                                <img src="images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/brand1.png" alt="">
+                                <p>耐克</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lt_footer">
+            <ul>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span ></a></li>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+            </ul>
+        </div>
+        <script type="text" id="tpl">
+            {{each rows v i}}
+            <li data-id="{{v.id}}" class="{{i===0?'now':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+            {{/each}}
+        </script>
+        <script src="lib/mui/js/mui.js"></script>
+        <script src="lib/zepto/zepto.min.js"></script>
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="js/cate.js"></script>
+</body>
+
+</html>
