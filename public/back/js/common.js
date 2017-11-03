@@ -56,7 +56,20 @@ $(function() {
         }, 1000);
     });
 
+    $(".btns").on("click", function() {
 
+        //发送一个ajax请求，告诉服务器我要退出了，服务器会清空你的session
+        $.ajax({
+            type: "get",
+            url: "/employee/employeeLogout",
+            success: function(data) {
+                if (data.success) {
+                    window.location.href = "login.html";
+                }
+            }
+        })
+
+    });
 
 
 })
