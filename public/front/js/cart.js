@@ -27,6 +27,7 @@ mui.init({
 
 
 });
+//编辑功能
 $(".info_content").on("tap", ".compile", function() {
     log(1);
     var data = this.dataset;
@@ -50,11 +51,11 @@ $(".info_content").on("tap", ".compile", function() {
                     if (data.success) {
                         //如果成功，重新下拉一次
                         mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading();
+                    } else {
+                        mui.toast("操作取消")
                     }
                 }
             });
-
-
         }
 
     });
@@ -62,4 +63,45 @@ $(".info_content").on("tap", ".compile", function() {
     $(".lt_edit_size span").on("tap", function() {
         $(this).addClass("now").siblings().removeClass("now");
     })
+});
+//删除功能
+$(".info_content").on("tap", ".delete", function() {
+    log(1);
+    var id = $(this).data("id");
+    mui.confirm("确定删除吗?", "提示", ["否", "是"], function(e) {
+        if (e.index == 0) {
+            mui.toast("操作取消");
+        } else {
+
+            $.ajax({
+                type: "get",
+                url: "/cart/deleteCart",
+                data: {
+                    id: [id] //id必须是一个数组
+                },
+                success: function(data) {
+                    tools.checkLogin(data);
+                    if (data.success) {
+                        //让容器下拉一次
+                        mui(".mui-scroll-wrapper").pullRefresh().pulldownLoading();
+                    }
+                }
+            })
+        }
+
+    })
+});
+$(".info_content").on("change", ".ck", function() {
+    log(1);
+
+
+    var total = 0;
+
+    $(":checked").each(function(i, e) {
+
+        total += $(this).data("num") * $(this).data("price");
+
+    });
+
+    $(".lt_total span").html(total);
 });
