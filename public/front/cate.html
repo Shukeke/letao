@@ -15,9 +15,9 @@
 <body>
     <div class="lt_container">
         <div class="lt_header">
-            <a href="#"><span class="fa fa-home icon_left"></span></a>
+            <a href="letao.html"><span class="fa fa-home icon_left"></span></a>
             <h4>乐淘商城</h4>
-            <a href="#"><span class="fa fa-search icon_right"></span></a>
+            <a href="seach.html"><span class="fa fa-search icon_right"></span></a>
         </div>
 
         <div class="lt_content">
@@ -39,35 +39,57 @@
         </div>
         <div class="lt_footer">
             <ul>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span ></a></li>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+                <li>
+                    <a href="letao.html">
+                        <span class="fa fa-home"></span>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cate.html">
+                        <span class="fa fa-bars"></span>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <span class="fa fa-user"></span>
+                        <p>会员中心</p>
+                    </a>
+                </li>
             </ul>
         </div>
-        <script type="text" id="tpl">
-            {{each rows v i}}
-            <li data-id="{{v.id}}" class="{{i===0?'now':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
-            {{/each}}
-        </script>
-        <script type="text/html" id="tpl2">
-            {{if rows.length === 0}}
-            <p class="info">暂时没有更多的数据</p>
-            {{/if}} {{each rows v i}}
-            <li>
-                <a href="#">
-                    <img src="{{v.brandLogo}}" alt="">
-                    <p>{{v.brandName}}</p>
-                </a>
-            </li>
-            {{/each}}
-        </script>
+    </div>
+    </div>
+    <script type="text" id="tpl">
+        {{each rows v i}}
+        <li data-id="{{v.id}}" class="{{i===0?'now':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+        {{/each}}
+    </script>
+    <script type="text/html" id="tpl2">
+        {{if rows.length === 0}}
+        <p class="info">暂时没有更多的数据</p>
+        {{/if}} {{each rows v i}}
+        <li>
+            <a href="#">
+                <img src="{{v.brandLogo}}" alt="">
+                <p>{{v.brandName}}</p>
+            </a>
+        </li>
+        {{/each}}
+    </script>
 
 
-        <script src="lib/mui/js/mui.js"></script>
-        <script src="lib/zepto/zepto.min.js"></script>
-        <script src="lib/artTemplate/template-web.js"></script>
-        <script src="js/cate.js"></script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/cate.js"></script>
 </body>
 
 </html>

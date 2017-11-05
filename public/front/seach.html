@@ -44,24 +44,45 @@
         </div>
         <div class="lt_footer">
             <ul>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span ></a></li>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
-                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+                <li>
+                    <a href="letao.html">
+                        <span class="fa fa-home"></span>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cate.html">
+                        <span class="fa fa-bars"></span>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li class="now">
+                    <a href="cart.html">
+                        <span class="fa fa-shopping-cart"></span>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <span class="fa fa-user"></span>
+                        <p>会员中心</p>
+                    </a>
+                </li>
             </ul>
         </div>
-        <script type="text/html" id="tpl">
-            {{each arr v i }}
-            <li class="mui-clearfix">
-                <a href="searchList.html?key={{v}}" class="mui-pull-left">{{v}}</a>
-                <span class="mui-pull-right fa fa-close" data-index="{{i}}"></span>
-            </li>
-            {{ /each}}
-        </script>
-        <script src="lib/mui/js/mui.js"></script>
-        <script src="lib/zepto/zepto.min.js"></script>
-        <script src="lib/artTemplate/template-web.js"></script>
-        <script src="js/seach.js"></script>
+    </div>
+    <script type="text/html" id="tpl">
+        {{each arr v i }}
+        <li class="mui-clearfix">
+            <a href="searchList.html?key={{v}}" class="mui-pull-left">{{v}}</a>
+            <span class="mui-pull-right fa fa-close" data-index="{{i}}"></span>
+        </li>
+        {{ /each}}
+    </script>
+    <script src="lib/mui/js/mui.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/seach.js"></script>
 
 </body>
 
