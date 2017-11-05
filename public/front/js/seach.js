@@ -21,7 +21,7 @@ render();
 })
  */
 function render() {
-    var str1 = localStorage.getItem("le_his");
+    var str1 = localStorage.getItem("le_his") || "[]";
     var arr = JSON.parse(str1);
     $('.content').html(template('tpl', { arr: arr }));
 }
@@ -47,7 +47,7 @@ $(".btnsearch").on("click", function() {
         return;
     }
 
-    var str2 = localStorage.getItem("le_his");
+    var str2 = localStorage.getItem("le_his") || "[]";
     var arr3 = JSON.parse(str2);
     log(arr3);
     var index = arr3.indexOf(key);

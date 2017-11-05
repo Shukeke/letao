@@ -33,14 +33,14 @@
                     <!--排序div-->
                     <div class="lt_sort">
                         <a href="javascript:;">上架时间 <span class="fa fa-angle-down"></span></a>
-                        <a href="javascript:;">价格 <span class="fa fa-angle-down"></span></a>
-                        <a href="javascript:;">库存 <span class="fa fa-angle-down"></span></a>
+                        <a href="javascript:;" data-type="price">价格 <span class="fa fa-angle-down"></span></a>
+                        <a href="javascript:;" data-type="num">库存 <span class="fa fa-angle-down"></span></a>
                         <a href="javascript:;">折扣 <span class="fa fa-angle-down"></span></a>
                     </div>
 
                     <!--商品-->
                     <div class="lt_product mui-clearfix">
-                        <div class="loading"></div>
+
                         <!--挖个坑-->
                     </div>
                 </div>
@@ -56,7 +56,7 @@
         </div>
         <script type="text/html" id="tpl">
             {{each data v i}}
-            <a href="#" class="item">
+            <a href="goods.html?product={{v.id}}" class="item">
                 <img src="{{v.pic[0].picAddr}}" alt="">
                 <p class="mui-ellipsis-2">{{v.proName}}</p>
                 <p>

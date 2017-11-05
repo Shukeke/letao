@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="" href="favicon.ico">
+    <link rel="stylesheet" type="" href="lib/fa/css/font-awesome.css">
+    <link rel="stylesheet" type="" href="lib/mui/css/mui.css">
+    <link rel="stylesheet" type="" href="css/common.css">
+    <link rel="stylesheet" type="" href="css/cart.css">
+</head>
+
+<body>
+    <div class="lt_container">
+        <div class="lt_header">
+            <a href="#"><span class="fa fa-home icon_left"></span></a>
+            <h4>购物车</h4>
+        </div>
+
+        <div class="lt_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul id="OA_task_2" class="mui-table-view  info_content">
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lt_total">
+            <div>订单总金额：&yen;<span>00.00</span></div>
+            <a href="javascript:;">生成订单</a>
+        </div>
+        <div class="lt_footer">
+            <ul>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span ></a></li>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+                <li><a href="#"><span class="fa fa-home"><p>首页</p></span></a></li>
+            </ul>
+        </div>
+        <script type="text/html" id="tpl">
+            {{each data v i}}
+            <li class="mui-table-view-cell mui-transitioning">
+                <div class="mui-slider-right mui-disabled">
+                    <a class="mui-btn mui-btn-yellow mui-icon mui-icon-compose compile" data-id="{{v.id}}" data-num="{{v.num}}" data-productsize="{{v.productSize}}" data-size="{{v.size}}" data-productnum={{v.productNum}}> </a>
+                    <a class="mui-btn mui-btn-red mui-icon mui-icon-trash" data-id="{{v.id}}"></a>
+                </div>
+                <div class="mui-slider-handle ">
+                    <div class="mui-table-cell">
+                        <div class="imgs">
+                            <img src="{{v.pic[0].picAddr}}" alt="">
+                        </div>
+                        <div class="info">
+                            <p class="info_p">{{v.proName}}</p>
+                            <p class="picinfo">
+                                <span class="red">&yen;{{v.price}}</span>
+                                <span class="old">&yen;{{v.oldPrice}}</span>
+                                <span class="mui-pull-right">{{v.productNum}}</span>
+                            </p>
+                            <p class="size">鞋码：{{v.size}}</p>
+                        </div>
+                        <input type="checkbox" name="ck" value="" class="checkbox" data-id="{{v.id}}" data-num="{{v.num}}" data-price="{{v.price}}">
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </script>
+        <script type="text/html" id="tpl2">
+            <div class="lt_edit_size">
+                <strong>尺码：</strong>
+                <%  var temp=productsize.split("-");
+for(var i = temp[0]; i <= temp[1]; i++){
+%>
+                    <span class="{{i==size?'now':''}}">{{i}}</span>
+                    <% } %>
+            </div>
+            <div class="lt_edit_num">
+                <strong>数量：</strong>
+                <div class="mui-numbox" data-numbox-min='1' data-numbox-max='{{productnum}}'>
+                    <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+                    <input class="mui-numbox-input" type="number" value="{{num}}" />
+                    <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+                </div>
+            </div>
+
+        </script>
+
+
+        <script src="lib/mui/js/mui.js"></script>
+        <script src="lib/zepto/zepto.min.js"></script>
+        <script src="lib/artTemplate/template-web.js"></script>
+        <script src="js/commom.js"></script>
+        <script src="js/cart.js"></script>
+</body>
+
+</html>
